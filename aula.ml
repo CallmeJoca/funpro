@@ -17,3 +17,8 @@ let dia_util = function
 let has2el = function [_;_] -> true | _ -> false
 
 type 'a arv = F | N of 'a * 'a arv list
+
+let rec to_list a = 
+  match a with
+  | F -> []
+  | N (esq,x,dir) -> to_list esq @ x :: to_list dirS
